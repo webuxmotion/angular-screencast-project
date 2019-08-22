@@ -1,3 +1,14 @@
-<p [class]="myClass">header works!</p>
-<div [style.height.px]="blockHeight" class="header__bordered-block"></div>
+<p (click)="myColor = 'blue'" [style.color]="myColor">
+  Header works!!
+</p>
 
+<p (click)="changeBg()" [style.background]="myBg">
+  Header works. BG!!
+</p>
+
+<input 
+  type="text" 
+  (input)="changeColor($event.target.value)"
+  (keydown.enter)="changeColor('green')"
+  (keydown.control.shift)="changeColor('red')"
+>

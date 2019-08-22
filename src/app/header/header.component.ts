@@ -7,21 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  public myClass = 'red';
-  public blockHeight = 200;
+  public myColor = 'red';
+  public myBg = 'grey';
 
   constructor() {
-    setTimeout(() => {
-      this.myClass = 'green';
-
-      setTimeout(() => {
-        this.myClass = 'blue';
-        this.blockHeight = 300;
-      }, 2000);
-    }, 2000);
   }
 
   ngOnInit() {
+  }
+  
+  changeColor(color = 'blue') {
+    this.myColor = color;
+  }
+
+  changeBg(color = 'blue') {
+    this.myBg = color;
   }
 
 }
